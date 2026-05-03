@@ -212,7 +212,7 @@ STAR-App/
 
 Manajemen project menggunakan metode SCRUM melalui ClickUp.
 
-**Link ClickUp:** [Klik di sini untuk melihat SCRUM Board STAR App](https://app.clickup.com/LINK_CLICKUP_KAMU)
+**Link ClickUp:** [Klik di sini untuk melihat SCRUM Board STAR App](https://app.clickup.com/90181808525/v/li/901816229400)
 
 ### Sprint Overview
 
