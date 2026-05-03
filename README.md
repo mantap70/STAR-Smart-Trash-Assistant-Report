@@ -1,0 +1,1 @@
+# STAR-Smart-Trash-Assistant-Report
