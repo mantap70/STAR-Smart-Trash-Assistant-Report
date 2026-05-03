@@ -56,7 +56,7 @@ Selain itu, STAR menyediakan fitur pelaporan sampah berlebih yang secara otomati
 > Halaman pembuka aplikasi dengan logo STAR
 
 <p align="center">
-  <img src="docs/images/splash_screen.png" alt="Splash Screen" width="280"/>
+  <img src="docs/images/splash.png" alt="Splash Screen" width="280"/>
 </p>
 
 ---
@@ -67,7 +67,6 @@ Selain itu, STAR menyediakan fitur pelaporan sampah berlebih yang secara otomati
 <p align="center">
   <img src="docs/images/login.png" alt="Login Screen" width="280"/>
   &nbsp;&nbsp;&nbsp;
-  <img src="docs/images/register.png" alt="Register Screen" width="280"/>
 </p>
 
 ---
@@ -76,7 +75,7 @@ Selain itu, STAR menyediakan fitur pelaporan sampah berlebih yang secara otomati
 > Halaman utama dengan menu fitur-fitur aplikasi STAR
 
 <p align="center">
-  <img src="docs/images/home.png" alt="Home Screen" width="280"/>
+  <img src="docs/images/dashboard.png" alt="Home Screen" width="280"/>
 </p>
 
 ---
@@ -87,7 +86,6 @@ Selain itu, STAR menyediakan fitur pelaporan sampah berlebih yang secara otomati
 <p align="center">
   <img src="docs/images/scan.png" alt="Scan Screen" width="280"/>
   &nbsp;&nbsp;&nbsp;
-  <img src="docs/images/scan_result.png" alt="Scan Result Screen" width="280"/>
 </p>
 
 ---
@@ -96,7 +94,7 @@ Selain itu, STAR menyediakan fitur pelaporan sampah berlebih yang secara otomati
 > Kirim laporan sampah membludak ke petugas kebersihan terdekat
 
 <p align="center">
-  <img src="docs/images/notifikasi.png" alt="Notifikasi Screen" width="280"/>
+  <img src="docs/images/report.png" alt="Notifikasi Screen" width="280"/>
 </p>
 
 ---
@@ -105,7 +103,7 @@ Selain itu, STAR menyediakan fitur pelaporan sampah berlebih yang secara otomati
 > Halaman profil dan riwayat laporan pengguna
 
 <p align="center">
-  <img src="docs/images/profil.png" alt="Profil Screen" width="280"/>
+  <img src="docs/images/eco-profile.png" alt="Profil Screen" width="280"/>
 </p>
 
 ---
@@ -205,11 +203,8 @@ STAR-App/
 
 | Nama | NIM | Role |
 |---|---|---|
-| [Nama Kamu] | [NIM Kamu] | Android Developer |
-| [Nama Anggota 2] | [NIM] | UI/UX Designer |
-| [Nama Anggota 3] | [NIM] | Backend / Firebase |
-
-> *Ganti dengan data tim kamu yang sebenarnya*
+| Fathan Atallah Rasya Nugraha | 312410425 | Android Developer |
+>
 
 ---
 
