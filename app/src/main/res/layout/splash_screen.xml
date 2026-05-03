@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#061106">
+
+    <!-- Center Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Logo Container -->
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp">
+
+            <!-- Star Icon -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="★"
+                android:textColor="#9EEF75"
+                android:textSize="120sp" />
+
+            <!-- Trash Icon (overlay) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="🗑"
+                android:textColor="#0A2900"
+                android:textSize="32sp" />
+
+        </FrameLayout>
+
+        <!-- Title -->
+        <TextView
+            android:layout_marginTop="32dp"
+            android:text="Oasis"
+            android:textColor="#9EEF75"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/plusjakartasans_extrabold"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_marginTop="8dp"
+            android:text="THE STAR ECO-SYSTEM"
+            android:textColor="#A1AF9C"
+            android:textSize="12sp"
+            android:letterSpacing="0.2"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/manrope_semibold"/>
+
+    </LinearLayout>
+
+    <!-- Bottom Loading -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Loading Bar Background -->
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="4dp"
+            android:background="#1A2A19">
+
+            <!-- Loading Progress -->
+            <View
+                android:id="@+id/loadingBar"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="#9EEF75"/>
+        </FrameLayout>
+
+        <!-- Loading Text -->
+        <TextView
+            android:layout_marginTop="16dp"
+            android:text="Starting your eco journey..."
+            android:textColor="#A1AF9C"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/manrope_medium"/>
+    </LinearLayout>
+
+</FrameLayout>
