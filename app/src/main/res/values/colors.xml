@@ -1,5 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- === STAR App Color Palette === -->
+
+    <!-- Background & Surface -->
+    <color name="background">#FF061106</color>
+    <color name="surface">#FF061106</color>
+    <color name="surface_dim">#FF061106</color>
+    <color name="surface_bright">#FF1F301E</color>
+    <color name="surface_container">#FF0F1D0F</color>
+    <color name="surface_container_low">#FF0A1609</color>
+    <color name="surface_container_high">#FF152313</color>
+    <color name="surface_container_highest">#FF1A2A19</color>
+    <color name="surface_container_lowest">#FF000000</color>
+    <color name="surface_variant">#FF1A2A19</color>
+
+    <!-- Primary -->
+    <color name="primary">#FF9EEF75</color>
+    <color name="primary_dim">#FF90E069</color>
+    <color name="primary_fixed">#FF9EEF75</color>
+    <color name="primary_fixed_dim">#FF90E069</color>
+    <color name="primary_container">#FF66B342</color>
+    <color name="on_primary">#FF1F5800</color>
+    <color name="on_primary_container">#FF0A2900</color>
+    <color name="on_primary_fixed">#FF154300</color>
+    <color name="on_primary_fixed_variant">#FF236300</color>
+    <color name="inverse_primary">#FF286D00</color>
+
+    <!-- Secondary -->
+    <color name="secondary">#FF9FF884</color>
+    <color name="secondary_dim">#FF91EA78</color>
+    <color name="secondary_fixed">#FF9FF884</color>
+    <color name="secondary_fixed_dim">#FF91EA78</color>
+    <color name="secondary_container">#FF166E05</color>
+    <color name="on_secondary">#FF0D5F00</color>
+    <color name="on_secondary_container">#FFE7FFD9</color>
+    <color name="on_secondary_fixed">#FF084A00</color>
+    <color name="on_secondary_fixed_variant">#FF126B02</color>
+
+    <!-- Tertiary -->
+    <color name="tertiary">#FFFFE483</color>
+    <color name="tertiary_dim">#FFEDC600</color>
+    <color name="tertiary_fixed">#FFFDD400</color>
+    <color name="tertiary_fixed_dim">#FFEDC600</color>
+    <color name="tertiary_container">#FFFDD400</color>
+    <color name="on_tertiary">#FF635200</color>
+    <color name="on_tertiary_container">#FF594A00</color>
+    <color name="on_tertiary_fixed">#FF433700</color>
+    <color name="on_tertiary_fixed_variant">#FF645300</color>
+
+    <!-- Error -->
+    <color name="error">#FFFF7351</color>
+    <color name="error_dim">#FFD53D18</color>
+    <color name="error_container">#FFB92902</color>
+    <color name="on_error">#FF450900</color>
+    <color name="on_error_container">#FFFFD2C8</color>
+
+    <!-- On Colors -->
+    <color name="on_background">#FFF0FEE9</color>
+    <color name="on_surface">#FFF0FEE9</color>
+    <color name="on_surface_variant">#FFA1AF9C</color>
+    <color name="inverse_surface">#FFF0FEE9</color>
+    <color name="inverse_on_surface">#FF4C5849</color>
+
+    <!-- Outline -->
+    <color name="outline">#FF6C7968</color>
+    <color name="outline_variant">#FF3F4B3C</color>
+    <color name="outline_variant_30">#4D3F4B3C</color>
+
+    <!-- Surface Tint -->
+    <color name="surface_tint">#FF9EEF75</color>
+
+    <!-- Utility -->
+    <color name="primary_glow">#4D9EEF75</color>
+    <color name="facebook_blue">#FF1877F2</color>
 </resources>

@@ -17,9 +17,9 @@ public class SplashActivity extends AppCompatActivity {
 
         // Delay 3 detik
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
             startActivity(intent);
-            finish(); // biar tidak balik ke splash
+            finish();
         }, 3000);
     }
 }

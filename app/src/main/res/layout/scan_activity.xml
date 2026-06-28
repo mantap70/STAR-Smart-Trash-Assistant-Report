@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- ===== CAMERA PREVIEW — pakai TextureView (built-in, tanpa dependency) ===== -->
+    <TextureView
+        android:id="@+id/cameraPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- ===== OVERLAY GELAP atas ===== -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="top"
+        android:background="@drawable/bg_scan_overlay_top" />
+
+    <!-- ===== OVERLAY GELAP bawah ===== -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_scan_overlay_bottom" />
+
+    <!-- ===== SCAN LINE ANIMASI ===== -->
+    <View
+        android:id="@+id/scanLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/bg_scan_line"
+        android:layout_gravity="center" />
+
+    <!-- ===== TOP APP BAR ===== -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="48dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="12dp"
+        android:layout_gravity="top">
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/default_avatar"
+            android:background="@drawable/bg_avatar_scan"
+            android:scaleType="centerCrop"
+            android:contentDescription="Avatar"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STAR"
+            android:textColor="@color/primary"
+            android:textSize="22sp"
+            android:textStyle="bold|italic"
+            android:letterSpacing="-0.05"
+            android:fontFamily="@font/plusjakartasans"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/ivNotification"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/notifications"
+            app:tint="@color/primary"
+            android:contentDescription="Notifications"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- ===== AI ASSISTANT CARD ===== -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/bg_ai_card"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <FrameLayout
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_ai_icon"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ai_assistant"
+                app:tint="@color/primary"
+                android:contentDescription="AI" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI Assistant"
+                android:textColor="@color/on_surface"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/plusjakartasans" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arahkan kamera ke arah sampah"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="12sp"
+                android:fontFamily="@font/manrope" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ===== VIEWFINDER CORNER BRACKETS ===== -->
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="180dp"
+        android:layout_marginEnd="200dp"
+        android:src="@drawable/bracket_top_left"
+        android:contentDescription="Corner" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="180dp"
+        android:layout_marginStart="200dp"
+        android:src="@drawable/bracket_top_right"
+        android:contentDescription="Corner" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="200dp"
+        android:src="@drawable/bracket_bottom_left"
+        android:contentDescription="Corner" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="200dp"
+        android:src="@drawable/bracket_bottom_right"
+        android:contentDescription="Corner" />
+
+    <!-- ===== TOMBOL FLASH & GALLERY (kanan tengah) ===== -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/btnFlash"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_side_btn"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:id="@+id/ivFlash"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/flash"
+                app:tint="@color/on_surface"
+                android:contentDescription="Flash" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnGallery"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_side_btn">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/galery"
+                app:tint="@color/on_surface"
+                android:contentDescription="Gallery" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- ===== STATUS DETECTING OBJECTS ===== -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="160dp"
+        android:text="DETECTING\nOBJECTS..."
+        android:textColor="@color/on_surface"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.15"
+        android:gravity="center"
+        android:fontFamily="@font/manrope" />
+
+    <!-- ===== BOTTOM NAVIGATION ===== -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_bottom_nav"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:elevation="8dp">
+
+            <LinearLayout
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/grid_view"
+                    app:tint="@color/on_surface_variant"
+                    android:contentDescription="Home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOME"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="7sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:fontFamily="@font/manrope"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navLocate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/distance"
+                    app:tint="@color/on_surface_variant"
+                    android:contentDescription="Locate" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOCATE"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="7sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:fontFamily="@font/manrope"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/navEco"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/eco_leaf"
+                    app:tint="@color/on_surface_variant"
+                    android:contentDescription="ECO" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ECO"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="7sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:fontFamily="@font/manrope"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navHistory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/history"
+                    app:tint="@color/on_surface_variant"
+                    android:contentDescription="History" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HISTORY"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="7sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:fontFamily="@font/manrope"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- FAB Scan -->
+        <LinearLayout
+            android:id="@+id/navScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:elevation="20dp">
+
+            <FrameLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_fab"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/center_focus"
+                    app:tint="@color/on_primary"
+                    android:contentDescription="Scan" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCAN"
+                android:textColor="@color/primary"
+                android:textSize="7sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:fontFamily="@font/manrope"
+                android:layout_marginTop="3dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

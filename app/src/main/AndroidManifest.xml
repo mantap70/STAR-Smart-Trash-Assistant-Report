@@ -1,34 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    package="com.mantao.star">
+
+    <!-- ===== PERMISSIONS ===== -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.STAR"
-        tools:targetApi="31">
-        <activity android:name=".SplashActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+        android:theme="@style/Theme.STAR">
 
+        <!-- LoginActivity — LAUNCHER -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.STAR">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- MainActivity — Dashboard -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.STAR" />
+
+        <!-- ScanActivity — Kamera Scan -->
+        <activity
+            android:name=".ScanActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.STAR.Fullscreen" />
+
+        <!-- ChatbotActivity — AI Assistant -->
+        <activity
+            android:name=".ChatbotActivity"
+            android:exported="false"
+            android:theme="@style/Theme.STAR" />
+
+        <!-- ReportActivity — Report Incident -->
+        <activity
+            android:name=".ReportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.STAR" />
+
+        <!-- HistoryActivity — Scan & Report History -->
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.STAR" />
+
+        <!-- EcoActivity — Eco Points & Achievements -->
+        <activity
+            android:name=".EcoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.STAR" />
+
+        <!-- LocateActivity — Report locations map (osmdroid) -->
+        <activity
+            android:name=".LocateActivity"
+            android:exported="false"
+            android:theme="@style/Theme.STAR" />
+
+        <!-- InfoActivity — Eco Tips & News -->
+        <activity
+            android:name=".InfoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.STAR" />
+
+        <!-- ArticleDetailActivity — Full article reading page -->
+        <activity
+            android:name=".ArticleDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.STAR" />
+
     </application>
 
 </manifest>

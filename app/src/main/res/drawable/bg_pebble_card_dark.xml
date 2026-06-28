@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- surface_container_low: #0A1609 — lebih gelap dari card biasa, untuk Logout -->
+    <solid android:color="#FF0A1609" />
+
+    <corners
+        android:topLeftRadius="32dp"
+        android:topRightRadius="16dp"
+        android:bottomLeftRadius="16dp"
+        android:bottomRightRadius="48dp" />
+
+</shape>
