@@ -80,7 +80,7 @@ Semua data riwayat (scan & laporan) tersimpan **secara lokal di perangkat**, dan
   &nbsp;&nbsp;
   <img src="docs/images/scan.png" alt="Scan Screen" width="220"/>
   &nbsp;&nbsp;
-  <img src="docs/images/eco.png" alt="Eco Profile Screen" width="220"/>
+  <img src="docs/images/eco_profile.png" alt="Eco Profile Screen" width="220"/>
 </p>
 
 ---
